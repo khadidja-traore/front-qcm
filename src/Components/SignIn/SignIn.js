@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 // import {Redirect} from '../react-router-dom'
 import {useNavigate} from 'react-router-dom'
@@ -20,33 +20,33 @@ function SignIn() {
             return {...prevState, [name]: value};
         }))
     }
-    const navigate = useNavigate();
-    const onSubmit = (event) => {
+    // const navigate = useNavigate();
+    // const onSubmit = (event) => {
 
-        event.preventDefault();
+    //     event.preventDefault();
 
-        const user = {
-            username : {username},
-            email : {email},
-            password : {password}
-        };
+    //     const user = {
+    //         username : {username},
+    //         email : {email},
+    //         password : {password}
+    //     };
 
         
 
-        // axios.post('http://localhost:5000/api/register', user)
-        // .then( response => {
-        //     console.log(response.data);
-        //     // window.location = 'http://localhost:3000/';
-        //     // <Route to='' />
-        //     // navigate('http://localhost:3000/');
-        // })
-        // .catch(err => console.log(err));
-
-
-    }
-
-    
-
+    //     useEffect(() => {
+          
+    //       axios.post('http://localhost:5000/api/register', user)
+    //       .then( response => {
+    //           console.log(response.data);
+    //           window.location = 'http://localhost:3000/';
+    //           <Route to='' />
+    //           navigate('http://localhost:3000/');
+    //       })
+    //       .catch(err => console.log(err));
+          
+    //     }, []);
+     
+    // }
 
     return (
         <div class="container-lg d-flex flex-column justify-content-center align-items-center">
