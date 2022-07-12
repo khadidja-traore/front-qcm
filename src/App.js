@@ -6,6 +6,7 @@ import SignIn from './Components/SignIn/SignIn';
 import Home from './Components/Profil/Profil';
 import { UserProvider } from './Components/UserContext/UserContext';
 import Profil from './Components/Profil/Profil';
+import Qcm from './Components/Qcm/Qcm';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/profil/:id" element={<Profil />} />
+        <Route path="/Qcm" element={<Qcm />} />
 
       </Routes>
 
