@@ -1,7 +1,22 @@
-import React, {useState} from 'react'
+import React, {Component, useState, useParams} from 'react'
 
-function Qcm() {
+class Qcm extends Component{
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+      titleqcm: '',
+        titlequestion: '',
+        answer1:'',
+        answer2:'',
+        answer3:'',
+        answer4:'',
+    }
+}
+}
 
+function Create() {
+    
     const [formValue, setFormValue] = useState({
         titleqcm: '',
         titlequestion: '',
@@ -10,6 +25,11 @@ function Qcm() {
         answer3:'',
         answer4:'',
     });
+    const params = useParams();
+
+    const userId = params.id;
+    const url = "http://localhost:5000/create/"+userId;
+
     const {titleqcm, titlequestion, answer1,answer2, answer3, answer4,} = formValue;
     
     const handleInputcomplet = (event) => {
@@ -26,6 +46,7 @@ function Qcm() {
 
     <h1>Créez votre QCM</h1>
 
+    <form action={url} method="post">
     <label>Titre du questionnaire</label>
     <br />
     <input name="titleqcm" value={titleqcm} onChange={handleInputcomplet}></input>
@@ -53,11 +74,11 @@ function Qcm() {
     <br />
     <br />
     <input type="submit" value="Enregistrer" className="btn btn-success"></input>
-
+    </form>
     </div>
 
 )
   }
 
 
-export default Qcm
+export default Create
