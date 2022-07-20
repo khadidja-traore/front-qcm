@@ -7,6 +7,7 @@ import Home from './Components/Profil/Profil';
 import { UserProvider } from './Components/UserContext/UserContext';
 import Profil from './Components/Profil/Profil';
 import Create from './Components/Create/Create';
+import Fill from './Components/Fill/Fill';
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/profil/:id" element={<Profil />} />
-        <Route path="/Create" element={<Create />} />
+        <Route path="/create/:id" element={<Create />} />
+        <Route path="/fill/:id" element={<Fill />} />
 
       </Routes>
 

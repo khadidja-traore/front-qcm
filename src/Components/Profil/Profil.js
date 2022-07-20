@@ -49,7 +49,7 @@ function Profil() {
     var urlCreate = "/create/"+userId;
     var urlEdit = "/edit/"+userId;
     var urlFill = "/fill/"+userId;
-    var urlView = "/view/"+userId;
+    var urlAffiche = "/view/"+userId;
 
   return (
     <div class="container mt-5">
@@ -73,7 +73,7 @@ function Profil() {
                 {isAdmin &&  <Link to={urlEdit} class="card-link">Modifier les QCMs</Link> }
                 
                 <Link to={urlFill} class="card-link">Faire un QCM</Link>
-                <Link to={urlView} class="card-link">Voir ses réponses</Link>
+                <Link to={urlAffiche} class="card-link">Voir ses réponses</Link>
            
                 </div>
             </div>
